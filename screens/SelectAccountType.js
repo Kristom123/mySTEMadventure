@@ -12,18 +12,40 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <ImageBackground source={image} style={styles.background_image}>
-        <Image style={styles.logo} source={require('../assets/logo.png')} />
-        <Pressable
-          style={styles.button}
-          onPress={() => navigation.navigate('Home')}>
-          <Text
-            style={{
-              //fontFamily: 'Barlow_Regular',
-              fontSize: 26,
-            }}>
-            Start
+      <View style={{flex: 1}}/>
+        <View style={{flex: 3, justifyContent: 'center', alignItems: 'center'}}>
+          <Text style={{
+            fontFamily: 'Urbanist_Regular',
+            fontSize: 26,
+          }}>
+            I am the...
           </Text>
-        </Pressable>
+          <Text style={{padding: 10}}></Text>
+          <Pressable
+            style={styles.button}
+            onPress={() => navigation.navigate('Home')}>
+            <Text
+              style={{
+                fontFamily: 'Urbanist_Regular',
+                fontSize: 26,
+              }}>
+              Parent
+            </Text>
+          </Pressable>
+          <Text style={{padding: 2}}></Text>
+          <Pressable
+            style={styles.button}
+            onPress={() => navigation.navigate('LikesQuiz')}>
+            <Text
+              style={{
+                fontFamily: 'Urbanist_Regular',
+                fontSize: 26,
+              }}>
+              Child
+            </Text>
+          </Pressable>
+        </View>
+        <View style={{flex: 1}}/>
       </ImageBackground>
     </View>
   );

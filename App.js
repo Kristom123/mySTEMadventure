@@ -3,8 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // You can import from local files
-import SelectAccountTypeScreen from './screens/SelectAccountType';
 import HomeScreen from './screens/Home';
+import SelectAccountTypeScreen from './screens/SelectAccountType';
+import LikesQuizScreen from './screens/LikesQuiz';
 
 {
   /* Create the stack for navigation */
@@ -30,6 +31,11 @@ export default function App() {
           name="SelectAccountType"
           options={{ headerShown: false }}
           component={SelectAccountTypeScreen}
+        />
+        <Stack.Screen
+          name="LikesQuiz"
+          options={{ headerShown: false }}
+          component={LikesQuizScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
