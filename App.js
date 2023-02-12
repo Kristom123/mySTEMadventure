@@ -3,9 +3,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // You can import from local files
+import IntroModuleScreen from './screens/IntroModule';
+
 import HomeScreen from './screens/Home';
 import SelectAccountTypeScreen from './screens/SelectAccountType';
 import LikesQuizScreen from './screens/LikesQuiz';
+import ParentDashboardScreen from './screens/ParentDashboard';
 
 {
   /* Create the stack for navigation */
@@ -23,6 +26,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="path">
         <Stack.Screen
+          name="IntroModule"
+          options={{ headerShown: false }}
+          component={IntroModuleScreen}
+        />
+        <Stack.Screen
           name="Home"
           options={{ headerShown: false }}
           component={HomeScreen}
@@ -36,6 +44,11 @@ export default function App() {
           name="LikesQuiz"
           options={{ headerShown: false }}
           component={LikesQuizScreen}
+        />
+        <Stack.Screen
+          name="ParentDashboard"
+          options={{ headerShown: false }}
+          component={ParentDashboardScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

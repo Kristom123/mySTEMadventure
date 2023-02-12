@@ -29,9 +29,9 @@ module.exports = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 14,
-    paddingHorizontal: 50,
-    borderRadius: 25,
+    paddingVertical: 11.5,
+    paddingHorizontal: 38,
+    borderRadius: 50,
     elevation: 3,
     backgroundColor: colors.green,
   }

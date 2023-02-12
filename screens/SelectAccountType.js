@@ -23,7 +23,7 @@ export default function Home({ navigation }) {
           <Text style={{padding: 10}}></Text>
           <Pressable
             style={styles.button}
-            onPress={() => navigation.navigate('Home')}>
+            onPress={() => navigation.navigate('ParentDashboard')}>
             <Text
               style={{
                 fontFamily: 'Urbanist_Regular',
