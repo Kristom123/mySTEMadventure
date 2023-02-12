@@ -10,8 +10,13 @@ import { StyleSheet, Dimensions } from 'react-native';
   module.exports = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center',
-      backgroundColor: colors.light,
+      justifyContent: 'center',
+      backgroundColor: '#ffffff',
+    },
+    background_image: {
+      flex: 1,
+      resizeMode: 'cover',
+      justifyContent: 'center',
     },
     logo: {
       width: windowWidth,
