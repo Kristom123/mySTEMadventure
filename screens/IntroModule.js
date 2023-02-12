@@ -35,7 +35,7 @@ export default function IntroModule({ navigation }) {
                 <View style={{ flex: 1.02 }} />
                 <View style={{ flex: 1, justifyContent: 'space-evenly', alignItems: 'center', padding: 20 }}>
                     <Pressable
-                        onPress={() => navigation.navigate('LikesQuiz')}>
+                        onPress={() => navigation.navigate('CameraModule')}>
                         <Image source={require('../assets/imready.png')} style={{width: 233, resizeMode: 'contain',}}/>
                     </Pressable>
                 </View>

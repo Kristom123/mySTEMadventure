@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // You can import from local files
 import IntroModuleScreen from './screens/IntroModule';
+import CameraModuleScreen from './screens/CameraModule';
+import FactsModuleScreen from './screens/FactsModule';
 
 import HomeScreen from './screens/Home';
 import SelectAccountTypeScreen from './screens/SelectAccountType';
@@ -29,6 +31,16 @@ export default function App() {
           name="IntroModule"
           options={{ headerShown: false }}
           component={IntroModuleScreen}
+        />
+        <Stack.Screen
+          name="CameraModule"
+          options={{ headerShown: false }}
+          component={CameraModuleScreen}
+        />
+        <Stack.Screen
+          name="FactsModule"
+          options={{ headerShown: false }}
+          component={FactsModuleScreen}
         />
         <Stack.Screen
           name="Home"
