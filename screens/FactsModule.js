@@ -10,7 +10,7 @@ import image from '../assets/facts_background.png';
 const styles = require('../config/style');
 import colors from '../config/colors';
 
-export default function IntroModule({ navigation }) {
+export default function FactsModule({ navigation }) {
     return (
         <View style={styles.container}>
             <ImageBackground source={image} style={styles.background_image}>

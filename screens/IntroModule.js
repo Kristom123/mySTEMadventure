@@ -8,7 +8,6 @@ import image from '../assets/intro_background.png';
 
 // import style sheet and color palette
 const styles = require('../config/style');
-import colors from '../config/colors';
 
 export default function IntroModule({ navigation }) {
     {
@@ -35,7 +34,7 @@ export default function IntroModule({ navigation }) {
                 <View style={{ flex: 1.02 }} />
                 <View style={{ flex: 1, justifyContent: 'space-evenly', alignItems: 'center', padding: 20 }}>
                     <Pressable
-                        onPress={() => navigation.navigate('CameraModule')}>
+                        onPress={() => navigation.navigate('TakePictureModule')}>
                         <Image source={require('../assets/imready.png')} style={{width: 233, resizeMode: 'contain',}}/>
                     </Pressable>
                 </View>
