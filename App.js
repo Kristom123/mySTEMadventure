@@ -1,11 +1,15 @@
-import * as React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Camera,CameraType } from 'expo-camera';
+import * as MediaLibrary from 'expo-media-library';
 
 // You can import from local files
 import HomeScreen from './screens/Home';
 import SelectAccountTypeScreen from './screens/SelectAccountType';
 import LikesQuizScreen from './screens/LikesQuiz';
+import { View } from 'react-native';
+import TestPageCamera from './screens/TestPageCamera';
 
 {
   /* Create the stack for navigation */
@@ -19,6 +23,20 @@ const Stack = createNativeStackNavigator();
  */
 }
 export default function App() {
+  const [hasCameraPermission, setCameraPermission] = useState(null);
+  const[image, setImage] = useState(null);
+  const [type, setType] = useState(Camera.Constants.Type.back);
+  const [flash,setFlash] = useState(Camera.Constants.FlashMode.off);
+  const cameraRef = useRef(null);
+  
+  useEffect(() => {
+    (async () => { 
+      MediaLibrary.requestPermissionsAsync();
+      const cameraStatus = await Camera.requestCameraPermissionsAsync();
+      setCameraPermission(cameraStatus.status == 'granted');
+    })();
+  },[])
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="path">
@@ -37,6 +55,7 @@ export default function App() {
           options={{ headerShown: false }}
           component={LikesQuizScreen}
         />
+  
       </Stack.Navigator>
     </NavigationContainer>
   );
